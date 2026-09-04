@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InovaMente - Acesso Professor / Pedagogo</title>
+    <!-- Folha de Estilos Externa -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Conteiner Principal dividido em dois painéis (Layout Responsivo) -->
+    <div class="login-container" id="loginContainer">
+        
+        <!-- PAINEL ESQUERDO: Apresentação e Identidade Visual -->
+        <div class="brand-side">
+            <!-- Cabeçalho com a Logo Oficial InovaMente (Lâmpada com Cérebro/Infinito) -->
+            <div class="brand-header">
+                <img src="LOGO_INOVAMENTE.jpeg" alt="Logo InovaMente" class="brand-logo-img">
+                <span class="brand-title">InovaMente</span>
+            </div>
+
+            <!-- Tag indicando o perfil de acesso -->
+            <div class="badge-profile">
+                <span>🧑‍🏫 Acesso Professor / Pedagogo</span>
+            </div>
+
+            <!-- Chamada Principal Baseada nos Requisitos -->
+            <h1 class="brand-heading">Acompanhe a evolução de cada aluno em um só lugar.</h1>
+            
+            <p class="brand-description">
+                Registre avaliações, acompanhe laudos autorizados e mantenha a comunicação com famílias e instituição — tudo em um painel pensado para o seu dia a dia.
+            </p>
+
+            <!-- Rodapé Institucional do Painel -->
+            <div class="brand-footer">
+                Design acessível, inclusivo e adaptável para todos.
+            </div>
+        </div>
+
+        <!-- PAINEL DIREITO: Formulário de Autenticação -->
+        <div class="form-side">
+            <div class="form-wrapper">
+                <h2>Bem-vindo(a) de volta</h2>
+                <p class="subtitle">Entre com suas credenciais institucionais para acessar o painel.</p>
+
+                <!-- Formulário de Login -->
+                <form id="loginForm" novalidate>
+                    <!-- Campo: E-mail ou CPF -->
+                    <div class="input-group">
+                        <label for="username">E-mail institucional ou CPF</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            placeholder="nome@instituicao.edu.br" 
+                            required
+                        >
+                        <span class="error-message" id="usernameError">Por favor, insira um e-mail ou CPF válido.</span>
+                    </div>
+
+                    <!-- Campo: Senha com alternância de visibilidade -->
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                placeholder="Digite sua senha" 
+                                required
+                            >
+                            <button 
+                                type="button" 
+                                id="togglePassword" 
+                                class="btn-toggle-eye" 
+                                aria-label="Alternar visibilidade da senha"
+                            >
+                                👁️
+                            </button>
+                        </div>
+                        <span class="error-message" id="passwordError">A senha é obrigatória.</span>
+                    </div>
+
+                    <!-- Opções Adicionais: Lembrar dados e Recuperação de Senha -->
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            Manter conectado
+                        </label>
+                        <a href="#" class="link-forgot">Esqueci minha senha</a>
+                    </div>
+
+                    <!-- Botão de Submissão Principal -->
+                    <button type="submit" class="btn-primary">Entrar</button>
+                </form>
+
+                <!-- Suporte Institucional -->
+                <div class="support-text">
+                    Não tem acesso ainda? <a href="#">Fale com a coordenação da sua instituição</a>
+                </div>
+            </div>
+
+            <!-- Botão de Acessibilidade: Modo de Baixo Estímulo (Neurodivergência) -->
+            <button id="toggleLowStimulus" class="btn-accessibility">
+                <span class="icon"></span> Modo de baixo estímulo
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Script JavaScript Externo -->
+    <script src="script.js"></script>
+</body>
+</html>
